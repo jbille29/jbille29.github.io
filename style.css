@@ -1,0 +1,138 @@
+/* COLOR SCHEME
+  #17252A
+  #2B7A78
+  #3AAFA9
+  #DEF2F1
+  #FEFFFF
+*/
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  font-family: 'proxima-nova', sans-serif;
+  /*background-color: darkslateblue;*/
+}
+
+.row {
+  display: flex;
+  overflow: hidden;
+
+  /* sizing */
+  height: 1000px;
+
+
+}
+
+.side{
+  /* sizing */
+  height: inherit;
+  flex-basis: 30%;
+  min-width: 250px;
+  background-color: #2B7A78; /* darker blue*/
+
+  color: white;
+  text-align: center;
+}
+
+.main{
+  /* flex parent */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: hidden;
+  /* sizing */
+  height: inherit;
+  flex-basis: 70%;
+  max-width: 70%;
+  background-color: #DEF2F1; /* lighter blue*/
+}
+
+.column {
+  /* sizing */
+  /*height: inherit;*/
+  flex-basis: 33.3%;
+  max-width: 33.3%;
+  font-size: 0;
+
+  /* coloring */
+
+  /* testing */
+  /*border: 1px solid black;*/
+}
+
+.side img{
+  width:90%;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+.column img {
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+
+  margin-top: 15px;
+  margin-bottom: 0px;
+
+  border-radius: 10px;
+  border: 1px solid #3AAFA9;
+}
+
+.column img:hover {
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.footer {
+  /* sizing */
+  width: 100%;
+  height: 50px;
+
+  /* coloring */
+  background-color: #17252A;
+}
+
+.collapsible {
+  cursor: pointer;
+
+}
+
+.content {
+  display: none;
+  overflow: hidden;
+  background-color: #3AAFA9;
+
+  width: 90%;
+
+  color:white;
+  font-size: 16px;
+  padding: 0px 10px;
+
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+}
+
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media (max-width: 800px) {
+  .column {
+    flex: 50%;
+    max-width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}

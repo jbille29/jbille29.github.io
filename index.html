@@ -1,266 +1,107 @@
-
-<!-- TODO:  -->
-<!-- TODO: I need to add some sort of navication, on the left so they dont have to scroll to find anything. -->
-
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Page Title</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title></title>
 
-/* Style the body */
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
+  </head>
+  <body>
 
-/* Header/logo Title */
-.header {
-  padding: 80px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
+    <div class="row">
 
-/* Increase the font size of the heading */
-.header h1 {
-  font-size: 40px;
-}
+      <section class = "side">
+        <h2>Welcome to my site!</h2>
+        <img src="tree_house.jpg" alt="">
+        <h3>About me</h3>
+        <p>A mechanical engineer with a strong interest in mechantronics.</p>
+      </section>
 
-/* Style the top navigation bar */
-.navbar {
-  overflow: hidden;
-  background-color: #333;
-}
+      <section class = "main">
+        <div class="column">
+          <img class = "collapsible" src="images/punch.png" alt="punch">
+          <div class="content">
+            <h4>Punch</h4>
+            <p>My favorite project I had while working at Saint-Gobain, was a
+            developing a part that would eliminate the wobble from a punching mechanism.
+            The punching mechanism's purpose was to cut small slits into a delicate
+            silicon part, so there wasn't room for the current degrees of freedom.</p>
+          </div>
+          <img class = "collapsible" src="ocean.jpg" alt="">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+          <img class = "collapsible" src="images/control_box.jpg" alt="control box">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+          <img class = "collapsible" src="clouds.jpg" alt="clouds">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
 
-/* Style the navigation bar links */
-.navbar a {
-  float: left;
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 20px;
-  text-decoration: none;
-}
+        </div>
+        <div class="column">
+          <img class = "collapsible" src="images/coffee_maker.jpg" alt="coffee maker">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+          <img class = "collapsible" src="trees.jpg" alt="trees">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+          <img class = "collapsible" src="leaves.jpg" alt="leaves">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+          <img class = "collapsible" src="reflection.jpg" alt="">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+        <div class="column">
+          <img class = "collapsible" src="images/lcd.jpg" alt="lcd">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+          <img class = "collapsible" src="images/funnel.png" alt="funnel">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+          <img class = "collapsible" src="village.jpg" alt="village">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+          <img class="collapsible" src="tree_house.jpg" alt="treehouse">
+          <div class="content">
+            <p>Lorem ipsum...</p>
+          </div>
+        </div>
+      </section>
 
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
-/* Change color on hover */
-.navbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Style the top navigation bar */
-.sidenavbar {
-  overflow: hidden;
-  background-color: #333;
-}
-
-/* Style the navigation bar links */
-.sidenavbar a {
-  display: block;
-  color: white;
-  text-align: left;
-  padding: 14px 20px;
-  text-decoration: none;
-}
-
-/* Change color on hover */
-.sidenavbar a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-/* Column container */
-.row {
-  display: -ms-flexbox; /* IE10 */
-  display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
-  flex-wrap: wrap;
-}
-
-/* Create two unequal columns that sits next to each other */
-/* Sidebar/left column */
-.side {
-  -ms-flex: 30%; /* IE10 */
-  flex: 30%;
-  background-color: #f1f1f1;
-}
-
-.aboutme {
-  padding: 20px;
-}
-
-/* Main column */
-.main {
-  -ms-flex: 70%; /* IE10 */
-  flex: 70%;
-  background-color: white;
-  padding: 20px;
-}
-
-/* Fake image, just for this example */
-.fakeimg {
-  background-color: #aaa;
-  width: 100%;
-  padding: 20px;
-}
-
-/* Footer */
-.footer {
-  padding: 20px;
-  text-align: center;
-  background: #ddd;
-}
-
-/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 700px) {
-  .row {
-    flex-direction: column;
-  }
-}
-
-/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
-@media screen and (max-width: 400px) {
-  .navbar a {
-    float: none;
-    width: 100%;
-  }
-}
-</style>
-</head>
-<body>
-
-<div class="header">
-  <h1>My Website</h1>
-  <p>A website created by me.</p>
-</div>
-
-<div class="navbar">
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#">Link</a>
-  <a href="#" class="right">Link</a>
-</div>
-
-<div class="row">
-  <div class="side">
-
-    <div class="sidenavbar">
-      <a href="">Line-Following Robot with PIC</a>
-      <a href="#">Paperboy</a>
-      <a href="#">Reddit Scraper</a>
-      <a href="#1">Senior Design 2nd Semester</a>
-      <a href="#">Formula SAE</a>
-      <a href="#">Aerodynamics Lab</a>
-      <a href="#">Senior Design 1st Semester</a>
-      <a href="#1">Wisconsin Propulsion Lab</a>
-      <a href="#">Inverted Pendulum</a>
     </div>
-    <div class="aboutme">
-      <h2>About Me</h2>
-      <h5>Photo of me severly unprepared for this race:</h5>
-      <img style="width: 100%;" src="biking.jpg" alt="Me biking">
-      <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-      <h3>More Text</h3>
-      <p>Lorem ipsum dolor sit ame.</p>
-      <div class="fakeimg" style="height:60px;">Image</div><br>
-      <div class="fakeimg" style="height:60px;">Image</div><br>
-      <div class="fakeimg" style="height:60px;">Image</div>
-    </div>
-  </div>
 
-  <!-- Main Section -->
-  <div class="main">
-    <h2>Line-Following Robot with PIC</h2>
-    <h5>Sept 15, 2019</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>You don't wanna run into this guy in a dark ally!</p>
-    <p>This little guy uses IR sensors and a PIC microcontroller to navigate.</p>
-    <p class="note">Code available on request.</p>
+    <section class = "footer">
+    </section>
+    <script type="text/javascript">
+      let col1 = document.getElementsByClassName('collapsible');
+      let i;
 
-    <br>
-    <h2>Paperboy</h2>
-    <h5>May 3, 2019</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Just another app to swipe left on..</p>
-    <p>Paperboy is an Android I built with Java in Android Studio. To organize the code I used multiple design patterns common to game development like the Observer, Simple Factory, and the Strategy Pattern!</p>
-    <p class="note">Code available on request.</p>
+      for(i=0; i < col1.length; i++){
+        col1[i].addEventListener("click",function() {
+          this.classList.toggle("active");
 
-    <br>
-    <h2>Reddit Scraper</h2>
-    <h5>May 3, 2019</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Too lazy to scroll?</p>
-    <p>As an avid Reddit user, I developed a script in Python to collect the most recent posts how ever many I specifiy and in whichever subreddit I specifiy.</p>
-    <p class="note">Code available on request.</p>
 
-    <br>
-    <h2>Senior Design 2nd Semester</h2>
-    <h5>May 3, 2018</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Would you get in a plane made by college students? Don't worry ours is autonomous!</p>
-    <p>My team and I designed the structure, dynamics, and propulsion system of a plane starting from ground up. (talk about engineering process & SW & delverables)</p>
-    <p class = "note">Want to know more?</p>
+          let content = this.nextElementSibling;
+          if(content.style.display === "block"){
+            content.style.display = "none";
+          } else{
+            content.style.display = "block";
+          }
+        });
+      }
 
-    <br>
-    <h2>Formula SAE</h2>
-    <h5>August 24, 2017</h5>
-    <img style="height: 200px;" src="lcd.jpg" alt="Me biking">
-    <p>Start swiping</p>
-    <p>For Formula Sae Electric, a partner and I reprogrammed a Texas Instruments Launchpad microcontorller to populate a LCD with important information for the drive.</p>
+    </script>
 
-    <br>
-    <h2>Aerodynamics Lab</h2>
-    <h5>May 3, 2019</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p></p>
-    <p>In EMA 522, Aerodynamics Lab, my team and I were tasked with comparing pressure and velocity data on an airfoil from 4 different sources: ANSYS CFD simulations, wind tunnel experiments, published data, and aerodynamics theory.</p>
-    <p class = "note">Want to know more?</p>
-
-    <br>
-    <h2>Senior Design 1st Semester</h2>
-    <h5>May 3, 2019</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Senior Design Episode 1</p>
-    <p>From initial concept to functioning prototype. My team and I designed a </p>
-
-    <br>
-    <h2>Wisconsin Propulsion Lab</h2>
-    <h5>May 3, 2019</h5>
-    <img style = "height:200px;" src="wpl.png" alt="Wisconsin Propulsion Graph">
-    <p>Start swiping</p>
-    <p>Pa</p>
-
-    <br>
-    <h2>Inverted Pendulum</h2>
-    <h5>May 3, 2019</h5>
-    <img style = "height:200px;" src="pendulum.png" alt="Inverted Pendulum Graph">
-    <p>Start swiping</p>
-    <p>Pa</p>
-
-    <br>
-    <h2>Propane Storage Tank</h2>
-    <h5>May 3, 2019</h5>
-    <img style = "height:200px;" src="pendulum.png" alt="Inverted Pendulum Graph">
-    <p>Start swiping</p>
-    <p>Pa</p>
-
-  </div>
-</div>
-
-<div class="footer">
-  <h2>Footer</h2>
-</div>
-
-</body>
+  </body>
 </html>
